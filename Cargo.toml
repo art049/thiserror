@@ -35,9 +35,14 @@ anyhow = "1.0.73"
 ref-cast = "1.0.18"
 rustversion = "1.0.13"
 trybuild = { version = "1.0.108", features = ["diff"] }
+divan = { package = "codspeed-divan-compat", version = "4.2.1" }
 
 [workspace]
 members = ["impl", "tests/no-std"]
+
+[[bench]]
+name = "error_derive"
+harness = false
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
